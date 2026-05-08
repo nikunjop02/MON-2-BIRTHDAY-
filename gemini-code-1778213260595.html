@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday MON 2!</title>
+    <style>
+        /* Premium Cinematic Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
+            padding: 20px;
+        }
+
+        .glow-text {
+            font-size: 2.8rem; 
+            font-weight: 900;
+            color: #ffd700;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: blastIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
+        }
+
+        @keyframes blastIn {
+            0% { opacity: 0; transform: scale(2); filter: blur(10px); }
+            50% { opacity: 1; transform: scale(0.9); filter: blur(0px); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #cccccc;
+            opacity: 0;
+            animation: fadeIn 1s ease-in 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .music-section {
+            padding: 60px 20px;
+            background-color: #111111;
+            text-align: center;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        .music-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #333;
+        }
+
+        .music-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        /* 3 GAANON KE LIYE NAYI STYLING */
+        .song-item {
+            margin-bottom: 20px;
+            text-align: left;
+            background: #222;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .song-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        audio {
+            width: 100%;
+            height: 35px;
+            outline: none;
+        }
+        
+        /* Default audio player ke colors adjust karne ke liye (Thoda modern look) */
+        audio::-webkit-media-controls-panel {
+            background-color: #333;
+        }
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-mute-button {
+            filter: invert(1);
+        }
+
+        .surprise-section {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .magic-btn {
+            background: linear-gradient(45deg, #ffd700, #ffaa00);
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: 900;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+        }
+
+        .magic-btn:active {
+            transform: scale(0.95);
+        }
+
+        .hidden-message {
+            margin-top: 30px;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1 class="glow-text">HAPPY BIRTHDAY MON 2</h1>
+        <p class="subtitle">Niche scroll kar, ek surprise hai tere liye...</p>
+    </div>
+
+    <div class="music-section">
+        <div class="music-card">
+            <div class="music-title">🎵 Birthday Playlist 🎵</div>
+            <p style="color:#aaa; font-size:0.9rem; margin-bottom:20px;">Speaker volume full kar le!</p>
+            
+            <!-- GAANA NUMBER 1 -->
+            <div class="song-item">
+                <span class="song-name">1. Bappa Ni Kripa (Gujarati Pop)</span>
+                <audio controls>
+                    <source src="song1.mp3" type="audio/mpeg">
+                    Browser error.
+                </audio>
+            </div>
+
+            <!-- GAANA NUMBER 2 -->
+            <div class="song-item">
+                <span class="song-name">2. Montu Bhau Special (Marathi Vibe)</span>
+                <audio controls>
+                    <source src="song2.mp3" type="audio/mpeg">
+                    Browser error.
+                </audio>
+            </div>
+
+            <!-- GAANA NUMBER 3 -->
+            <div class="song-item">
+                <span class="song-name">3. Dhol Tasha Mix</span>
+                <audio controls>
+                    <source src="song3.mp3" type="audio/mpeg">
+                    Browser error.
+                </audio>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="surprise-section">
+        <button class="magic-btn" onclick="triggerMagic()">TAP FOR MAGIC</button>
+        <div class="hidden-message" id="secretMsg">TAME JIVO HAJARO SAL 🎉🥂</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        window.onload = function() {
+            var duration = 1.5 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({ particleCount: 7, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#ffd700', '#ffffff'] });
+                confetti({ particleCount: 7, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#ffd700', '#ffffff'] });
+                if (Date.now() < end) { requestAnimationFrame(frame); }
+            }());
+        };
+
+        function triggerMagic() {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) { return Math.random() * (max - min) + min; }
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) { return clearInterval(interval); }
+                var particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+
+            var secretMessage = document.getElementById('secretMsg');
+            secretMessage.style.display = 'block';
+            secretMessage.animate([
+              { transform: 'scale(0.5)', opacity: 0 },
+              { transform: 'scale(1.1)', opacity: 1 },
+              { transform: 'scale(1)', opacity: 1 }
+            ], { duration: 500, easing: 'ease-out', fill: 'forwards' });
+        }
+    </script>
+</body>
+</html>
